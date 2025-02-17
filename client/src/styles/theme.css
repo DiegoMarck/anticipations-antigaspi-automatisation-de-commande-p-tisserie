@@ -1,0 +1,131 @@
+:root {
+  /* Couleurs principales */
+  --color-brown: #4A2B0F;        /* Marron Angelina - couleur principale */
+  --color-brown-light: #8B633B;  /* Marron clair pour les hovers */
+  --color-brown-dark: #2C1907;   /* Marron foncé pour le contraste */
+  
+  /* Couleurs d'accent */
+  --color-gold: #C5A572;         /* Or pour les accents */
+  --color-beige: #E8D5B5;        /* Beige pour les fonds clairs */
+  --color-rose: #E4C3B9;         /* Rose saumon pour les sections spéciales */
+  
+  /* Couleurs neutres */
+  --color-white: #FFFFFF;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+  
+  /* Typographie */
+  --font-primary: 'Cormorant Garamond', serif;  /* Pour les titres */
+  --font-secondary: 'Work Sans', sans-serif;    /* Pour le texte */
+  
+  /* Tailles de police */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  
+  /* Espacements */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  
+  /* Ombres */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  
+  /* Bordures */
+  --border-radius-sm: 0.125rem;
+  --border-radius: 0.25rem;
+  --border-radius-md: 0.375rem;
+  --border-radius-lg: 0.5rem;
+  
+  /* Transitions */
+  --transition-all: all 0.3s ease;
+  --transition-colors: color 0.3s ease, background-color 0.3s ease;
+  --transition-transform: transform 0.3s ease;
+}
+
+/* Classes utilitaires */
+.text-primary {
+  font-family: var(--font-primary);
+}
+
+.text-secondary {
+  font-family: var(--font-secondary);
+}
+
+.bg-primary {
+  background-color: var(--color-brown);
+}
+
+.bg-secondary {
+  background-color: var(--color-beige);
+}
+
+.bg-accent {
+  background-color: var(--color-rose);
+}
+
+.text-brown {
+  color: var(--color-brown);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+/* Styles globaux */
+body {
+  font-family: var(--font-secondary);
+  color: var(--color-gray-900);
+  background-color: var(--color-gray-50);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--color-brown);
+}
+
+a {
+  color: var(--color-brown);
+  transition: var(--transition-colors);
+}
+
+a:hover {
+  color: var(--color-brown-light);
+}
+
+button {
+  transition: var(--transition-all);
+}
+
+/* Styles spécifiques pour les cartes */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  transition: var(--transition-all);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,75 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-beige);
+  padding: 2rem;
+}
+
+.login-container {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-logo {
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: var(--color-brown-dark);
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--color-brown-light);
+  border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-brown-dark);
+}
+
+.login-button {
+  background-color: var(--color-brown-dark);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: var(--color-brown-light);
+}
+
+.error-message {
+  color: #dc3545;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
+}

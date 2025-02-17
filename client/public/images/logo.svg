@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond du cercle -->
+  <circle cx="60" cy="60" r="58" fill="#475569" stroke="#334155" stroke-width="4"/>
+  
+  <!-- Chapeau de boulanger stylisé -->
+  <path d="M30 45C30 35 45 25 60 25C75 25 90 35 90 45C90 55 75 50 60 50C45 50 30 55 30 45Z" fill="white"/>
+  
+  <!-- Croissant stylisé -->
+  <path d="M40 65C40 55 50 50 60 50C70 50 80 55 80 65C80 75 70 85 60 85C50 85 40 75 40 65Z" fill="#E2E8F0"/>
+  <path d="M45 65C45 58 52 55 60 55C68 55 75 58 75 65C75 72 68 80 60 80C52 80 45 72 45 65Z" fill="#475569"/>
+</svg>

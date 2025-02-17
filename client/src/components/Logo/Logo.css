@@ -1,0 +1,49 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo__text {
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  color: var(--color-brown-dark);
+}
+
+.logo__text--main {
+  display: block;
+  font-weight: 600;
+}
+
+.logo__text--sub {
+  display: block;
+  font-weight: 400;
+  color: var(--color-brown-light);
+}
+
+/* Size variants */
+.logo--small .logo__text {
+  font-size: 1.5rem;
+}
+
+.logo--small .logo__text--sub {
+  font-size: 1rem;
+}
+
+.logo--medium .logo__text {
+  font-size: 2.5rem;
+}
+
+.logo--medium .logo__text--sub {
+  font-size: 1.5rem;
+}
+
+.logo--large .logo__text {
+  font-size: 4rem;
+}
+
+.logo--large .logo__text--sub {
+  font-size: 2rem;
+}

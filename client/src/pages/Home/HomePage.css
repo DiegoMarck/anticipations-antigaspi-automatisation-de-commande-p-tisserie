@@ -1,0 +1,52 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-beige);
+  padding: 2rem;
+}
+
+.home-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-logo {
+  margin-bottom: 1.5rem;
+}
+
+.home-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--color-brown-dark);
+  margin-bottom: 1.5rem;
+}
+
+.home-description {
+  font-family: 'Work Sans', sans-serif;
+  color: var(--color-brown-light);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.home-login-button {
+  background-color: var(--color-brown-dark);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.home-login-button:hover {
+  background-color: var(--color-brown-light);
+}

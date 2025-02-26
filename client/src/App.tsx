@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import MainLayout from '@/layouts/MainLayout'
 import HomePage from '@/pages/Home/HomePage'
 import LoginPage from '@/pages/Auth/LoginPage'
@@ -18,10 +18,10 @@ function PublicRoute({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         {/* Routes publiques */}
-        <Route path="/" element={<PublicRoute><HomePage /></PublicRoute>} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<PublicRoute><HomePage /></PublicRoute>} />
         <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
         <Route path="/register" element={<PublicRoute><RegisterPage /></PublicRoute>} />
@@ -38,7 +38,7 @@ function App() {
         {/* Redirection par défaut */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 

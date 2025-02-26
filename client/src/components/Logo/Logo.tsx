@@ -8,7 +8,7 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className = '', size = 'medium' }) => {
   return (
-    <div className={`logo logo--${size} ${className}`}>
+    <div className={`logo logo--${size} ${className}`} style={{ width: '50%' }}>
       <h1 className="logo__text">
         <span className="logo__text--main">Angelina</span>
         <span className="logo__text--sub">Paris</span>

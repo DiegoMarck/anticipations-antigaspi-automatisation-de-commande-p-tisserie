@@ -67,37 +67,35 @@ const activeStores = [
 
 export default function DashboardPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 p-2">
       {/* En-tête */}
-      <div>
-        <h1 className="text-4xl font-semibold text-brown">Tableau de bord</h1>
-        <p className="mt-2 text-sm text-gray-600">
+      <div className="mb-6">
+        <h1 className="text-4xl font-semibold text-brown font-primary">Tableau de bord</h1>
+        <p className="mt-2 text-sm text-gray-600 font-secondary">
           Vue d'ensemble de votre activité et des performances
         </p>
       </div>
 
-      {/* Vue d'ensemble */}
-      <div className="space-y-6">
-        <h2 className="text-xl font-semibold text-brown">Vue d'ensemble</h2>
-        
+      {/* Contenu principal */}
+      <div className="space-y-8">
         {/* Première ligne: Commandes du jour et Chiffre d'affaires */}
         <div className="dashboard-grid">
           {stats.map((stat) => (
             <Link
               key={stat.name}
               to={stat.href}
-              className="dashboard-card hover:transform hover:scale-105 transition-transform"
+              className="dashboard-card hover:transform hover:scale-105 transition-transform border border-beige"
             >
-              <div className="px-4 py-4">
+              <div className="p-4">
                 <dt>
-                  <div className="absolute rounded-md bg-beige p-2">
-                    <stat.icon size={16} color="var(--color-brown)" />
+                  <div className="absolute rounded-md bg-beige p-3">
+                    <stat.icon size={18} color="var(--color-brown)" />
                   </div>
-                  <p className="ml-12 truncate text-sm font-medium text-gray-600">{stat.name}</p>
+                  <p className="ml-14 truncate text-sm font-medium text-gray-600">{stat.name}</p>
                 </dt>
-                <dd className="ml-12 flex items-baseline">
-                  <p className="text-xl font-semibold text-brown">{stat.value}</p>
-                  <p className={`ml-2 flex items-baseline text-xs font-semibold ${
+                <dd className="ml-14 flex items-baseline mt-2">
+                  <p className="text-2xl font-semibold text-brown">{stat.value}</p>
+                  <p className={`ml-3 flex items-baseline text-xs font-semibold ${
                     stat.changeType === 'increase' ? 'text-green-600' :
                     stat.changeType === 'decrease' ? 'text-red-600' :
                     'text-gray-600'
@@ -120,15 +118,15 @@ export default function DashboardPage() {
 
         {/* Deuxième ligne: Produits les plus vendus et Boutiques actives */}
         <div className="dashboard-grid">
-          <div className="dashboard-card">
+          <div className="dashboard-card border border-beige">
             <div className="p-4">
-              <div className="flex items-center justify-between">
-                <h2 className="dashboard-title">Produits les plus vendus</h2>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="dashboard-title font-primary mb-0">Produits les plus vendus</h2>
                 <Link to="/products" className="text-sm font-medium text-brown hover:text-gold">
                   Voir tout
                 </Link>
               </div>
-              <div className="mt-4 flow-root">
+              <div className="flow-root">
                 <table className="min-w-full">
                   <thead>
                     <tr>
@@ -161,15 +159,15 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="dashboard-card">
+          <div className="dashboard-card border border-beige">
             <div className="p-4">
-              <div className="flex items-center justify-between">
-                <h2 className="dashboard-title">Boutiques actives</h2>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="dashboard-title font-primary mb-0">Boutiques actives</h2>
                 <Link to="/stores" className="text-sm font-medium text-brown hover:text-gold">
                   Voir tout
                 </Link>
               </div>
-              <div className="mt-4 flow-root">
+              <div className="flow-root">
                 <table className="min-w-full">
                   <thead>
                     <tr>
@@ -209,15 +207,15 @@ export default function DashboardPage() {
       </div>
 
       {/* Commandes récentes */}
-      <div className="dashboard-card">
+      <div className="dashboard-card border border-beige">
         <div className="p-4">
-          <div className="flex items-center justify-between">
-            <h2 className="dashboard-title">Commandes récentes</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="dashboard-title font-primary mb-0">Commandes récentes</h2>
             <Link to="/orders" className="text-sm font-medium text-brown hover:text-gold">
               Voir tout
             </Link>
           </div>
-          <div className="mt-4 flow-root">
+          <div className="flow-root">
             <table className="min-w-full">
               <thead>
                 <tr>

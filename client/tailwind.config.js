@@ -7,18 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+        'brown': {
+          DEFAULT: '#4A2B0F',
+          light: '#8B633B',
+          dark: '#2C1907',
         },
+        'gold': '#C5A572',
+        'beige': '#E8D5B5',
+        'rose': '#E4C3B9',
+      },
+      fontFamily: {
+        'primary': ['Cormorant Garamond', 'serif'],
+        'secondary': ['Work Sans', 'sans-serif'],
       },
     },
   },

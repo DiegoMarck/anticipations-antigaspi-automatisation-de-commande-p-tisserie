@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Importation des styles du thème */
+@import './styles/theme.css';
+
 /* Les styles du thème sont déjà importés directement dans les composants */
+
+@layer base {
+  body {
+    @apply font-secondary text-gray-800 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-primary text-brown;
+  }
+}
 
 @layer components {
   .card {
@@ -10,11 +23,11 @@
   }
   
   .btn-primary {
-    @apply rounded-md bg-primary-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600;
+    @apply rounded-md bg-brown px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brown-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown;
   }
 
   .input-field {
-    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6;
+    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brown sm:text-sm sm:leading-6;
   }
   
   .text-brown {
@@ -28,6 +41,85 @@
   .bg-beige {
     background-color: var(--color-beige);
   }
+  
+  .text-brown-light {
+    color: var(--color-brown-light);
+  }
+  
+  .text-brown-dark {
+    color: var(--color-brown-dark);
+  }
+  
+  .text-beige {
+    color: var(--color-beige);
+  }
+  
+  .text-rose {
+    color: var(--color-rose);
+  }
+  
+  .bg-brown {
+    background-color: var(--color-brown);
+  }
+  
+  .bg-brown-light {
+    background-color: var(--color-brown-light);
+  }
+  
+  .bg-brown-dark {
+    background-color: var(--color-brown-dark);
+  }
+  
+  .bg-gold {
+    background-color: var(--color-gold);
+  }
+  
+  .bg-rose {
+    background-color: var(--color-rose);
+  }
+  
+  .border-brown {
+    border-color: var(--color-brown);
+  }
+  
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+  
+  .border-beige {
+    border-color: var(--color-beige);
+  }
+}
+
+@layer utilities {
+  .font-secondary {
+    font-family: var(--font-secondary);
+  }
+  
+  .font-primary {
+    font-family: var(--font-primary);
+  }
+}
+
+/* Classes utilitaires supplémentaires pour les couleurs */
+.ring-brown {
+  --tw-ring-color: var(--color-brown);
+}
+
+.ring-gold {
+  --tw-ring-color: var(--color-gold);
+}
+
+.hover\:bg-brown:hover {
+  background-color: var(--color-brown);
+}
+
+.hover\:bg-brown-light:hover {
+  background-color: var(--color-brown-light);
+}
+
+.hover\:text-brown-light:hover {
+  color: var(--color-brown-light);
 }
 
 /* Correction des images */
@@ -40,7 +132,8 @@ img, video {
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -50,15 +143,21 @@ img, video {
 }
 
 .dashboard-card {
-  background-color: white;
+  background-color: var(--color-beige);
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  padding: 1.5rem;
+  padding: 1.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .dashboard-title {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-brown);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }

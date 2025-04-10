@@ -4,6 +4,7 @@ import HomePage from '@/pages/Home/HomePage'
 import LoginPage from '@/pages/Auth/LoginPage'
 import RegisterPage from '@/pages/Auth/RegisterPage'
 import DashboardPage from '@/pages/Dashboard/DashboardPage'
+import OrdersPage from '@/pages/Orders/OrdersPage'
 import { useAuth } from '@/useAuth'
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -29,7 +30,7 @@ function App() {
         {/* Routes protégées */}
         <Route element={<PrivateRoute><MainLayout /></PrivateRoute>}>
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/orders" element={<div>Commandes</div>} />
+          <Route path="/orders" element={<OrdersPage />} />
           <Route path="/analytics" element={<div>Analytics</div>} />
           <Route path="/stores" element={<div>Boutiques</div>} />
           <Route path="/products" element={<div>Produits</div>} />
